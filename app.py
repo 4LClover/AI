@@ -16,7 +16,8 @@ def hello_flask():
 
 @app.route('/image_verify', methods=['POST'])
 def image_verify():
-    image_url = request.form['image']	
+    data = request.json
+    image_url = data.get('image')
     print(image_url)
 
     openai.api_key = OPENAI_API_KEY
@@ -47,4 +48,4 @@ def image_verify():
 
 
 if __name__ == "__main__":
-		app.run()
+      app.run()
