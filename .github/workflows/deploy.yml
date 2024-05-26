@@ -43,3 +43,5 @@ jobs:
           docker build -t awesome_ai:${{steps.current-time.outputs.formattedTime}} .
           docker tag awesome_ai:${{steps.current-time.outputs.formattedTime}} public.ecr.aws/l0d7n0a1/awesome_ai:${{steps.current-time.outputs.formattedTime}}
           docker push public.ecr.aws/l0d7n0a1/awesome_ai:${{steps.current-time.outputs.formattedTime}}
+          docker tag awesome_ai:${{steps.current-time.outputs.formattedTime}} public.ecr.aws/l0d7n0a1/awesome_ai:latest
+          docker push public.ecr.aws/l0d7n0a1/awesome_ai:latest

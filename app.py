@@ -45,7 +45,7 @@ def image_verify():
 
     result = response.choices[0].message.content
     print(result)
-    return jsonify({"result": result}) # Yes or No 
+    return jsonify({"result": result}) # success or fail
 
 
 if __name__ == "__main__":
