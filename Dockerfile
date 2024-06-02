@@ -3,4 +3,4 @@ COPY . /app
 COPY requirements.txt requirements.txt							
 RUN pip install -r requirements.txt				
 WORKDIR /app
-CMD ["python", "-m", "gunicorn", "-w", "4", "app:app"]
+CMD ["python", "-m", "gunicorn", "-w", "4", "app:app", "--bind", "0.0.0.0:8000"]
